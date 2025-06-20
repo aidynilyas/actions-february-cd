@@ -23,5 +23,8 @@ jobs:
       - name: Select GCP project
         run: gcloud config set project studied-limiter-459823-r2
 
+      - name: Install plugin
+        run: gcloud components install kubectl gke-gcloud-auth-plugin
+
       - name: Connect to Kubernetes
         run: gcloud container clusters get-credentials cluster-1 --region us-central1 --project studied-limiter-459823-r2
