@@ -1,0 +1,9 @@
+deployment:
+  image:
+    repository: 5upreme/flask
+    tag: latest
+  port: 5000
+
+service:
+  type: LoadBalancer
+  port: 80
