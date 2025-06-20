@@ -29,5 +29,5 @@ jobs:
       - name: Connect to Kubernetes
         run: gcloud container clusters get-credentials cluster-1 --region us-central1 --project studied-limiter-459823-r2
 
-      - name: Test
-        run: kubectl get nodes
+      - name: Install app
+        run: helm upgrade --install flask ./flask
