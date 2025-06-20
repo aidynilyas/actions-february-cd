@@ -21,7 +21,7 @@ jobs:
         uses: google-github-actions/setup-gcloud@v2
 
       - name: Select GCP project
-        run: gcloud config set project kubernetes
+        run: gcloud config set project studied-limiter-459823-r2
 
       - name: Connect to Kubernetes
         run: gcloud container clusters get-credentials cluster-1 --region us-central1 --project studied-limiter-459823-r2
